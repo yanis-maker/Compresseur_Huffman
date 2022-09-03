@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Huffman: Référence du fichier /home/idir/Bureau/Projet-Huffman/Decompresseur.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet Huffman
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier /home/idir/Bureau/Projet-Huffman/Decompresseur.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Code source du décompresseur.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Decompresseur.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_decompresseur_8c__incl.png" border="0" usemap="#_2home_2idir_2_bureau_2_projet-_huffman_2_decompresseur_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnoeud.html">noeud</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structeur noeud: composer du nombre d'occurence, d'un pere, d'un enfant droit et d'un enfant gauche.  <a href="structnoeud.html#details">Plus de détails...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a23a591b87421332275c57bbc0bd88c83"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structnoeud.html">noeud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_decompresseur_8c.html#a23a591b87421332275c57bbc0bd88c83">noeud</a></td></tr>
+<tr class="memdesc:a23a591b87421332275c57bbc0bd88c83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Une nouvelle strcuture noeud.  <a href="#a23a591b87421332275c57bbc0bd88c83">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a23a591b87421332275c57bbc0bd88c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:af8ec6d65f7972a5352873f62669474ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_decompresseur_8c.html#af8ec6d65f7972a5352873f62669474ba">decompression</a> (char *fichier)</td></tr>
+<tr class="memdesc:af8ec6d65f7972a5352873f62669474ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction décompresse le fichier compresser et renvoie le résultat vers la sortie standard et égaleent dans un fichier unzip.  <a href="#af8ec6d65f7972a5352873f62669474ba">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af8ec6d65f7972a5352873f62669474ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_decompresseur_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
+<tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cette fonction verifie d'abord si le nombre de paramètre entrés est égale à 1. Si le fichier à décompresser est vide renvoie un message d'erreur, sinon si ces conditions sont remplies alors elle appelle la fonction décompression, qui vas décompresser le fichier.  <a href="#a3c04138a5bfe5d72780bb7e82a18e627">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a25fe327e043f7927e4182479c75aa71c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structnoeud.html">noeud</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_decompresseur_8c.html#a25fe327e043f7927e4182479c75aa71c">arbre</a> [511]</td></tr>
+<tr class="memdesc:a25fe327e043f7927e4182479c75aa71c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Un tableau de noeud où on vas stocker l'arbre qui se trouve dans le fichier à décompresser.  <a href="#a25fe327e043f7927e4182479c75aa71c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a25fe327e043f7927e4182479c75aa71c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Code source du décompresseur. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Yanis Bouallouche ; Ophélia Bénin</dd></dl>
+<p>Cette partie concerne le decompresseur </p>
+</div><h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="a23a591b87421332275c57bbc0bd88c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a591b87421332275c57bbc0bd88c83">&#9670;&nbsp;</a></span>noeud</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structnoeud.html">noeud</a> <a class="el" href="structnoeud.html">noeud</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Une nouvelle strcuture noeud. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="af8ec6d65f7972a5352873f62669474ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ec6d65f7972a5352873f62669474ba">&#9670;&nbsp;</a></span>decompression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void decompression </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fichier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction décompresse le fichier compresser et renvoie le résultat vers la sortie standard et égaleent dans un fichier unzip. </p>
+<p><br />
+ FONCTION decompression </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>Un pointeur vers un char qui doit être le fichier compresser </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void ne retourne rien </dd></dl>
+<p>On recupère l'arbre dans le fichier compresser puis on la mets dans le tableau arbre</p>
+<p>On utilise fgetc pour lire le fichier en mode binaire</p>
+<p>Si le caractère lu est plus grand que 0(vu que les octet sont lu en complément à 2) donc on par vers la gauche</p>
+<p>Si le caractère lu est plus petit que 0(vu que les octet sont lu en complément à 2) donc on par vers droite </p>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cette fonction verifie d'abord si le nombre de paramètre entrés est égale à 1. Si le fichier à décompresser est vide renvoie un message d'erreur, sinon si ces conditions sont remplies alors elle appelle la fonction décompression, qui vas décompresser le fichier. </p>
+<p><br />
+ FONCTION main </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="a25fe327e043f7927e4182479c75aa71c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fe327e043f7927e4182479c75aa71c">&#9670;&nbsp;</a></span>arbre</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structnoeud.html">noeud</a> arbre[511]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Un tableau de noeud où on vas stocker l'arbre qui se trouve dans le fichier à décompresser. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

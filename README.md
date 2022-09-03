@@ -1,2 +1,2 @@
-# compresseur_huffman
+# Compresseur_Huffman
 Compresseur Huffman

@@ -1,0 +1,27 @@
+
+Projet Huffman:
+Yanis Bouallouche 
+Ophélia Behinan
+GROUPE C
+
+
+
+
+
+Pour lancer le programme Huffman:
+
+**Exécuter le make
+	   Vas s'occuper de la compilation du programme compression et décompression et génerer deux exécutable du nom de "huf" pour le   		   compresseur et "dehuf" pour le décompresseur et nettoyerle répertoire des fichier .o.
+
+
+**Executer le programme de compression avec ./huf avec deux paramètre: le fichier source et le nom du fichier destinataire
+
+
+**Executer le programme de décompression avec ./dehuf qui prend en paramètre le fichier où le résultat de la compression a été stocké et qui crée un fichier "file_extract" contenant le résultat de cette décompression.
+
+
+**Pensez à supprimer le fichier qui stocke le code huffman(le fichier destinataire) pour une futur utilisation  
+
+**Archiveur Python: par.py 
+	Prend deux arguments un répertoire et archive le répertoire récursivement.
+	Pour extraire une archive il suffit de mettre -x comme premier paramètre et l'archive à extraire en deuxième paramètre 

@@ -1,0 +1,562 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Projet Huffman: Référence du fichier /home/idir/Bureau/Projet-Huffman/Compresseur.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Projet Huffman
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier /home/idir/Bureau/Projet-Huffman/Compresseur.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Fichier pour le compresseur contenant le code des toutes les fontions présentes dans le fichier d'en tête.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_compresseur_8h_source.html">Compresseur.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Compresseur.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="_compresseur_8c__incl.png" border="0" usemap="#_2home_2idir_2_bureau_2_projet-_huffman_2_compresseur_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:ad751926a9a5702957ad4b018b140decb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#ad751926a9a5702957ad4b018b140decb">affiche</a> (int *occurence)</td></tr>
+<tr class="memdesc:ad751926a9a5702957ad4b018b140decb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche le nombre d'occurence de chaque caractère et sa probabilité  <a href="#ad751926a9a5702957ad4b018b140decb">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad751926a9a5702957ad4b018b140decb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae10b899b8a3196bbc2f5fdb95856dd97"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#ae10b899b8a3196bbc2f5fdb95856dd97">afficheArbre</a> ()</td></tr>
+<tr class="memdesc:ae10b899b8a3196bbc2f5fdb95856dd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui affiche les noeud de l'arbre  <a href="#ae10b899b8a3196bbc2f5fdb95856dd97">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae10b899b8a3196bbc2f5fdb95856dd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537923ba3505b3f11b3a87e70ec69b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#a537923ba3505b3f11b3a87e70ec69b58">afficheCode</a> ()</td></tr>
+<tr class="memdesc:a537923ba3505b3f11b3a87e70ec69b58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche le code binaire de chaque caractère.  <a href="#a537923ba3505b3f11b3a87e70ec69b58">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a537923ba3505b3f11b3a87e70ec69b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa26b3ce848df7d5769ffb0d79946481f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#aa26b3ce848df7d5769ffb0d79946481f">afficheLg</a> (float lg)</td></tr>
+<tr class="memdesc:aa26b3ce848df7d5769ffb0d79946481f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche la longeur moyenne du codage.  <a href="#aa26b3ce848df7d5769ffb0d79946481f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa26b3ce848df7d5769ffb0d79946481f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9207c28953adf5a3b69bdd29981bf21"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#ac9207c28953adf5a3b69bdd29981bf21">afficheTaille</a> (float *T)</td></tr>
+<tr class="memdesc:ac9207c28953adf5a3b69bdd29981bf21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui affiche la taille original, la taille compresser sans et avec l'arbre et le gain de la compression pour les deux cas.  <a href="#ac9207c28953adf5a3b69bdd29981bf21">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac9207c28953adf5a3b69bdd29981bf21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adabad13fda9ecfe8049b7f1c40426b27"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#adabad13fda9ecfe8049b7f1c40426b27">lgmoyenne</a> (int *TabOccu)</td></tr>
+<tr class="memdesc:adabad13fda9ecfe8049b7f1c40426b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui calcule la longueur moyenne du codage.  <a href="#adabad13fda9ecfe8049b7f1c40426b27">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adabad13fda9ecfe8049b7f1c40426b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a237cc29ef0f2ada00b41757158458ea3"><td class="memItemLeft" align="right" valign="top">float *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#a237cc29ef0f2ada00b41757158458ea3">tailleEtgain</a> (char *source, char *dest, int *Tab)</td></tr>
+<tr class="memdesc:a237cc29ef0f2ada00b41757158458ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui calcule la taille original, la taille compresser sans et avec l'arbre et le gain en pourcentage de la compression pour les deux cas en octetet et les stocke dans un tableau.  <a href="#a237cc29ef0f2ada00b41757158458ea3">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a237cc29ef0f2ada00b41757158458ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23ec3f3fe014f3d69158654d6c0a8d12"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#a23ec3f3fe014f3d69158654d6c0a8d12">comptage</a> (char *file)</td></tr>
+<tr class="memdesc:a23ec3f3fe014f3d69158654d6c0a8d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui compte le nombre d'occurence de chaque caractère  <a href="#a23ec3f3fe014f3d69158654d6c0a8d12">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a23ec3f3fe014f3d69158654d6c0a8d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f78f72f38ce5af2d4ff6589a693afac"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#a9f78f72f38ce5af2d4ff6589a693afac">constructionArbre</a> (int *nbOccu)</td></tr>
+<tr class="memdesc:a9f78f72f38ce5af2d4ff6589a693afac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui construit l'abre à partir d'un tableau d'entier contenant le nombre d'occurence de chaque caractère et renvoie la racine.  <a href="#a9f78f72f38ce5af2d4ff6589a693afac">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9f78f72f38ce5af2d4ff6589a693afac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c116ac4711fd354898d142c19d57c4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#a3c116ac4711fd354898d142c19d57c4a">parcoursarbre</a> (int racine, char *codebin)</td></tr>
+<tr class="memdesc:a3c116ac4711fd354898d142c19d57c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction recursive qui parcours l'abre en commençant par la racine \ Attribut un 0 si on vas à gauche et attribut un 1 si on vas à droite et sauvegarde le résultat dans une chaîne de caractère et une fois qu'on tombe sur une feuille on copie le tableau qui contient le code d'un caractère dans le tableau char* code[256].  <a href="#a3c116ac4711fd354898d142c19d57c4a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3c116ac4711fd354898d142c19d57c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bf792c6869b3c3533f005470d9b1d9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#a4bf792c6869b3c3533f005470d9b1d9f">compression</a> (char *source, char *destination)</td></tr>
+<tr class="memdesc:a4bf792c6869b3c3533f005470d9b1d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui appelle les trois fonction comptage,constructionArbre et parcours arbre, et qui modifie le flux binaire du fichier destination.  <a href="#a4bf792c6869b3c3533f005470d9b1d9f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4bf792c6869b3c3533f005470d9b1d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af31e614a857023f13b2e48d8cc2f4065"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_compresseur_8c.html#af31e614a857023f13b2e48d8cc2f4065">compressionHuff</a> (char *file_source, char *file_dest)</td></tr>
+<tr class="memdesc:af31e614a857023f13b2e48d8cc2f4065"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction qui fait la compression en quatre étapes et qui appelle toutes les précédente fonction.  <a href="#af31e614a857023f13b2e48d8cc2f4065">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af31e614a857023f13b2e48d8cc2f4065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Fichier pour le compresseur contenant le code des toutes les fontions présentes dans le fichier d'en tête. </p>
+<dl class="section author"><dt>Auteur</dt><dd>Yanis Bouallouche ; Ophélia Benin</dd></dl>
+<p>Cette partie concerne le compresseur </p>
+</div><h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ad751926a9a5702957ad4b018b140decb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad751926a9a5702957ad4b018b140decb">&#9670;&nbsp;</a></span>affiche()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void affiche </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>occurence</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui affiche le nombre d'occurence de chaque caractère et sa probabilité </p>
+<p><br />
+ FONCTION affiche </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int*</td><td>Un tableau d'entier contenant le nombre d'occurence de chaque caractère </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Ne retourne rien </dd></dl>
+<p>Cette fonction calcule d'abord le nombre total de caractère, et ensuite elle affiche ce dernier ainsi que le nombre d'occurence et la probabilté de chaque caractère </p>
+
+</div>
+</div>
+<a id="ae10b899b8a3196bbc2f5fdb95856dd97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae10b899b8a3196bbc2f5fdb95856dd97">&#9670;&nbsp;</a></span>afficheArbre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheArbre </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui affiche les noeud de l'arbre </p>
+<p><br />
+ FONCTION: afficheArbre </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">void</td><td>ne prend aucun paramètre </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>ne retourne rien </dd></dl>
+<p>Cette fonction affiche l'arbre de huffman, pour chaque feuilles,le nombre d'occurences et l'indice du noeud pere est affiché</p>
+<p>Et pour chaque noeud le nombre d'occurence, l'indice du noeud pere de l'enfant gauche ainsi que l'enfant D est affiché </p>
+
+</div>
+</div>
+<a id="a537923ba3505b3f11b3a87e70ec69b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537923ba3505b3f11b3a87e70ec69b58">&#9670;&nbsp;</a></span>afficheCode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui affiche le code binaire de chaque caractère. </p>
+<p><br />
+ FONCTION: afficheCode </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">void</td><td>ne prend aucun paramètre </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>ne retourne rien </dd></dl>
+<p>Cette fonction affiche le code binaire de chaque feuille </p>
+
+</div>
+</div>
+<a id="aa26b3ce848df7d5769ffb0d79946481f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26b3ce848df7d5769ffb0d79946481f">&#9670;&nbsp;</a></span>afficheLg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheLg </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui affiche la longeur moyenne du codage. </p>
+<p><br />
+ FONCTION: afficheLg </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">float</td><td>la longueur moyenne  ne retourne rien </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9207c28953adf5a3b69bdd29981bf21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9207c28953adf5a3b69bdd29981bf21">&#9670;&nbsp;</a></span>afficheTaille()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheTaille </td>
+          <td>(</td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui affiche la taille original, la taille compresser sans et avec l'arbre et le gain de la compression pour les deux cas. </p>
+<p><br />
+ FONCTION: afficheTaille </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">float*</td><td>tableau de float contenant la taille original, la taille compresser sans et avec l'abre et le gain de la compression pour les deux cas </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>ne retourne rien </dd></dl>
+<p>Cette fonction prend un tableau de float où on a stocké la taille du fichier original, celle du fichier compressé avec et sans l'arbre ainsi que le gain dans les deux cas, donc elle prend un tableau de taille 5 .</p>
+<p>Le tableau de float est le résultat de la fonction float* tailleEtGain(char*,char*,int*) </p>
+
+</div>
+</div>
+<a id="a4bf792c6869b3c3533f005470d9b1d9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bf792c6869b3c3533f005470d9b1d9f">&#9670;&nbsp;</a></span>compression()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void compression </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui appelle les trois fonction comptage,constructionArbre et parcours arbre, et qui modifie le flux binaire du fichier destination. </p>
+<p><br />
+ FONCTION: compression </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>un pointeur char, qui doit être le fichier source </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>un pointeur char, qui doit être le fichier destinataire </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void ne retourne rien </dd></dl>
+<p>Positioner l'arbre en en-tête</p>
+<p>On parcourt le fichier source en utilisant fgetc qui va lire les caractères un à un et qui vas les stocker dans la variable int ascii</p>
+<p>On accede au code binaire correspondant au caractère lu. On s'arrête dés qu'on tombe sur '\0'</p>
+<p>On modifie le flux binaire en utilisant l'opérateur binaire 'ou'</p>
+<p>Si cpt est différent de 8 on décale à gauche</p>
+<p>Sinon cela veut dire qu'un octet est rempli , on utilise donc fputc pour mettre cet octet dans le flux write, on remet le cpt à zero </p>
+
+</div>
+</div>
+<a id="af31e614a857023f13b2e48d8cc2f4065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af31e614a857023f13b2e48d8cc2f4065">&#9670;&nbsp;</a></span>compressionHuff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void compressionHuff </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui fait la compression en quatre étapes et qui appelle toutes les précédente fonction. </p>
+<p><br />
+ FONCTION: compressionHuff </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>un pointeur char, qui doit être le fichier source </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>un pointeur char, qui doit être le fichier destinataire </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void ne retourne rien </dd></dl>
+<p>ÉTAPE 1: Le comptage</p>
+<p>ÉTAPE 2: La construction de l'arbre</p>
+<p>ÉTAPE 3: Le parcours de l'arbre</p>
+<p>Affichage de la longueur moyenne du codage</p>
+<p>ÉTAPE 4: La compression</p>
+<p>Affichage taille originale &amp; compressée &amp; gain de compression </p>
+
+</div>
+</div>
+<a id="a23ec3f3fe014f3d69158654d6c0a8d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23ec3f3fe014f3d69158654d6c0a8d12">&#9670;&nbsp;</a></span>comptage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* comptage </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui compte le nombre d'occurence de chaque caractère </p>
+<p><br />
+ FONCTION: Comptage </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>Prend un fichier(le fichier source) comme paramètre </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int* ; Un tableau d'entier qui contient le nombre d'encurronce de chaque caractère </dd></dl>
+<p>Les indices du tableau qui vas contenir le nombre d'occurences de chaque caractère correspondent au code ASCII de chaque caractère</p>
+<p>Allocation dynamique pour ne pas désalouer les valeurs à la sortie de la fonction</p>
+<p>Initialisation des valeurs du tableau à zero </p>
+
+</div>
+</div>
+<a id="a9f78f72f38ce5af2d4ff6589a693afac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f78f72f38ce5af2d4ff6589a693afac">&#9670;&nbsp;</a></span>constructionArbre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int constructionArbre </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui construit l'abre à partir d'un tableau d'entier contenant le nombre d'occurence de chaque caractère et renvoie la racine. </p>
+<p><br />
+ FONCTION: constructionArbre </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int*</td><td>Prend un tableau d'entier contenant le nombre d'occurence de chaque caractère </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>int ; la racine de l'arbre </dd></dl>
+<p>Initialisation à zéro pour les nombre d'occurence et à -1 pour pere,enfant_D et enfant_G pour touts les élements de l'arbre</p>
+<p>Mettre le nombre d'occurence des feuilles</p>
+<p>Dans le cas où le fichier à compresser contient qu'un seul type de caractère alors la fonction renvoie le code ASCII de ce caractère</p>
+<p>last représente le prochain noeud</p>
+<p>Recherche des deux plus petits nombre d'occurence dans l'abre</p>
+<p>On incrémente d'abord last puis on met dans ce noeud la somme des deux noeuds au plus petits nombre d'occurence et on modifie l'indice de l'enfant gauche et l'enfant droit du noeud à l'indice last ainsi que le père des deux neoud appareillés</p>
+<p>On répète tant qu'on va trouver 2 noeuds à joindre </p>
+
+</div>
+</div>
+<a id="adabad13fda9ecfe8049b7f1c40426b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabad13fda9ecfe8049b7f1c40426b27">&#9670;&nbsp;</a></span>lgmoyenne()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float lgmoyenne </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui calcule la longueur moyenne du codage. </p>
+<p><br />
+ FONCTION: lgmoyenne </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int*</td><td>Un tableau d'entier contenant le nombre d'occurence de chaque caractère </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>float ; La longueur moyenne du codage </dd></dl>
+<p>Cette fonction calcule la longueur moyenne du codage en aditionnant la probabilité multiplié par le nombre de bits du code de chaque chaque feuille </p>
+
+</div>
+</div>
+<a id="a3c116ac4711fd354898d142c19d57c4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c116ac4711fd354898d142c19d57c4a">&#9670;&nbsp;</a></span>parcoursarbre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void parcoursarbre </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction recursive qui parcours l'abre en commençant par la racine \ Attribut un 0 si on vas à gauche et attribut un 1 si on vas à droite et sauvegarde le résultat dans une chaîne de caractère et une fois qu'on tombe sur une feuille on copie le tableau qui contient le code d'un caractère dans le tableau char* code[256]. </p>
+<p><br />
+ FONCTION: parcoursarbre </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">int</td><td>un entier qui représente la racine de l'arbre </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>une chaine de caractère vide </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>void ne retourne rien </dd></dl>
+<p>On créer le tableau en local on en aura plus besoin par la suite.</p>
+<p>Recopie ncodeBin dans codeBin</p>
+<p>On positionne les 0 à gauche et les 1 à droite On met un '0' dans ncodebin</p>
+<p>Et on rappelle la fonction avec l'indice de l'enfant gauche et ncodebin ainsi de suite</p>
+<p>On met un '1' dans ncodebin</p>
+<p>Et on rappelle la fonction avec l'indice de l'enfant droit et ncodebin ainsi de suite</p>
+<p>Des qu'on tombe sur un noeud qui n'as pas d'enfant alors on est arriver à une feuille et on copie le contenue de nbcodebin dans le tableau char* code[256] à l'indice de la feuille </p>
+
+</div>
+</div>
+<a id="a237cc29ef0f2ada00b41757158458ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a237cc29ef0f2ada00b41757158458ea3">&#9670;&nbsp;</a></span>tailleEtgain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float* tailleEtgain </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction qui calcule la taille original, la taille compresser sans et avec l'arbre et le gain en pourcentage de la compression pour les deux cas en octetet et les stocke dans un tableau. </p>
+<p><br />
+ FONCTION: tailleEtgain </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>un pointeur vers un char qui représente le fichier source </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">char*</td><td>un pointeur vers un char qui représente le fichier destinataire </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">int*</td><td>un tableau d'entier contenant le nombre d'occurence de chaque caractère </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>float ; tableau de float contenant la taille original, la taille compresser sans et avec l'arbre et le gain de la compression pour les deux cas </dd></dl>
+<p>strcuture nécaissaire pour la fonction qui calcule la taille d'un fichier <br />
+ struct stat st;</p>
+<p>Calcule la taille du fichier source</p>
+<p>Calcule la taille du fichier compresser avec l'arbre</p>
+<p>Calcule la taille du fichier compresser sans l'arbre</p>
+<p>Calcule le gain avec arbre</p>
+<p>Calcule le gain sans arbre</p>
+<p>Stocke tout les résultat dans un tableau float </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

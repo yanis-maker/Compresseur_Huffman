@@ -1,0 +1,106 @@
+\hypertarget{_decompresseur_8c}{}\section{Référence du fichier /home/idir/\+Bureau/\+Projet-\/\+Huffman/\+Decompresseur.c}
+\label{_decompresseur_8c}\index{/home/idir/\+Bureau/\+Projet-\/\+Huffman/\+Decompresseur.\+c@{/home/idir/\+Bureau/\+Projet-\/\+Huffman/\+Decompresseur.\+c}}
+
+
+Code source du décompresseur.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Graphe des dépendances par inclusion de Decompresseur.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnoeud}{noeud}
+\begin{DoxyCompactList}\small\item\em Structeur noeud\+: composer du nombre d\textquotesingle{}occurence, d\textquotesingle{}un pere, d\textquotesingle{}un enfant droit et d\textquotesingle{}un enfant gauche. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structnoeud}{noeud} \hyperlink{_decompresseur_8c_a23a591b87421332275c57bbc0bd88c83}{noeud}
+\begin{DoxyCompactList}\small\item\em Une nouvelle strcuture noeud. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_decompresseur_8c_af8ec6d65f7972a5352873f62669474ba}{decompression} (char $\ast$fichier)
+\begin{DoxyCompactList}\small\item\em Cette fonction décompresse le fichier compresser et renvoie le résultat vers la sortie standard et égaleent dans un fichier unzip. \end{DoxyCompactList}\item 
+int \hyperlink{_decompresseur_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Cette fonction verifie d\textquotesingle{}abord si le nombre de paramètre entrés est égale à 1. Si le fichier à décompresser est vide renvoie un message d\textquotesingle{}erreur, sinon si ces conditions sont remplies alors elle appelle la fonction décompression, qui vas décompresser le fichier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnoeud}{noeud} \hyperlink{_decompresseur_8c_a25fe327e043f7927e4182479c75aa71c}{arbre} \mbox{[}511\mbox{]}
+\begin{DoxyCompactList}\small\item\em Un tableau de noeud où on vas stocker l\textquotesingle{}arbre qui se trouve dans le fichier à décompresser. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Code source du décompresseur. 
+
+\begin{DoxyAuthor}{Auteur}
+Yanis Bouallouche ; Ophélia Bénin
+\end{DoxyAuthor}
+Cette partie concerne le decompresseur 
+
+\subsection{Documentation des définitions de type}
+\mbox{\Hypertarget{_decompresseur_8c_a23a591b87421332275c57bbc0bd88c83}\label{_decompresseur_8c_a23a591b87421332275c57bbc0bd88c83}} 
+\index{Decompresseur.\+c@{Decompresseur.\+c}!noeud@{noeud}}
+\index{noeud@{noeud}!Decompresseur.\+c@{Decompresseur.\+c}}
+\subsubsection{\texorpdfstring{noeud}{noeud}}
+{\footnotesize\ttfamily typedef struct \hyperlink{structnoeud}{noeud} \hyperlink{structnoeud}{noeud}}
+
+
+
+Une nouvelle strcuture noeud. 
+
+
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{_decompresseur_8c_af8ec6d65f7972a5352873f62669474ba}\label{_decompresseur_8c_af8ec6d65f7972a5352873f62669474ba}} 
+\index{Decompresseur.\+c@{Decompresseur.\+c}!decompression@{decompression}}
+\index{decompression@{decompression}!Decompresseur.\+c@{Decompresseur.\+c}}
+\subsubsection{\texorpdfstring{decompression()}{decompression()}}
+{\footnotesize\ttfamily void decompression (\begin{DoxyParamCaption}\item[{char $\ast$}]{fichier }\end{DoxyParamCaption})}
+
+
+
+Cette fonction décompresse le fichier compresser et renvoie le résultat vers la sortie standard et égaleent dans un fichier unzip. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON decompression 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em char$\ast$} & Un pointeur vers un char qui doit être le fichier compresser \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void ne retourne rien 
+\end{DoxyReturn}
+On recupère l\textquotesingle{}arbre dans le fichier compresser puis on la mets dans le tableau arbre
+
+On utilise fgetc pour lire le fichier en mode binaire
+
+Si le caractère lu est plus grand que 0(vu que les octet sont lu en complément à 2) donc on par vers la gauche
+
+Si le caractère lu est plus petit que 0(vu que les octet sont lu en complément à 2) donc on par vers droite \mbox{\Hypertarget{_decompresseur_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{_decompresseur_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{Decompresseur.\+c@{Decompresseur.\+c}!main@{main}}
+\index{main@{main}!Decompresseur.\+c@{Decompresseur.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Cette fonction verifie d\textquotesingle{}abord si le nombre de paramètre entrés est égale à 1. Si le fichier à décompresser est vide renvoie un message d\textquotesingle{}erreur, sinon si ces conditions sont remplies alors elle appelle la fonction décompression, qui vas décompresser le fichier. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON main 
+
+\subsection{Documentation des variables}
+\mbox{\Hypertarget{_decompresseur_8c_a25fe327e043f7927e4182479c75aa71c}\label{_decompresseur_8c_a25fe327e043f7927e4182479c75aa71c}} 
+\index{Decompresseur.\+c@{Decompresseur.\+c}!arbre@{arbre}}
+\index{arbre@{arbre}!Decompresseur.\+c@{Decompresseur.\+c}}
+\subsubsection{\texorpdfstring{arbre}{arbre}}
+{\footnotesize\ttfamily \hyperlink{structnoeud}{noeud} arbre\mbox{[}511\mbox{]}}
+
+
+
+Un tableau de noeud où on vas stocker l\textquotesingle{}arbre qui se trouve dans le fichier à décompresser. 
+

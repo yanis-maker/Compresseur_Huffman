@@ -1,0 +1,353 @@
+\hypertarget{_compresseur_8c}{}\section{Référence du fichier /home/idir/\+Bureau/\+Projet-\/\+Huffman/\+Compresseur.c}
+\label{_compresseur_8c}\index{/home/idir/\+Bureau/\+Projet-\/\+Huffman/\+Compresseur.\+c@{/home/idir/\+Bureau/\+Projet-\/\+Huffman/\+Compresseur.\+c}}
+
+
+Fichier pour le compresseur contenant le code des toutes les fontions présentes dans le fichier d\textquotesingle{}en tête.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Compresseur.\+h\char`\"{}}\newline
+Graphe des dépendances par inclusion de Compresseur.\+c\+:
+% FIG 0
+\subsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_compresseur_8c_ad751926a9a5702957ad4b018b140decb}{affiche} (int $\ast$occurence)
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche le nombre d\textquotesingle{}occurence de chaque caractère et sa probabilité \end{DoxyCompactList}\item 
+void \hyperlink{_compresseur_8c_ae10b899b8a3196bbc2f5fdb95856dd97}{affiche\+Arbre} ()
+\begin{DoxyCompactList}\small\item\em fonction qui affiche les noeud de l\textquotesingle{}arbre \end{DoxyCompactList}\item 
+void \hyperlink{_compresseur_8c_a537923ba3505b3f11b3a87e70ec69b58}{affiche\+Code} ()
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche le code binaire de chaque caractère. \end{DoxyCompactList}\item 
+void \hyperlink{_compresseur_8c_aa26b3ce848df7d5769ffb0d79946481f}{affiche\+Lg} (float lg)
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche la longeur moyenne du codage. \end{DoxyCompactList}\item 
+void \hyperlink{_compresseur_8c_ac9207c28953adf5a3b69bdd29981bf21}{affiche\+Taille} (float $\ast$T)
+\begin{DoxyCompactList}\small\item\em Fonction qui affiche la taille original, la taille compresser sans et avec l\textquotesingle{}arbre et le gain de la compression pour les deux cas. \end{DoxyCompactList}\item 
+float \hyperlink{_compresseur_8c_adabad13fda9ecfe8049b7f1c40426b27}{lgmoyenne} (int $\ast$Tab\+Occu)
+\begin{DoxyCompactList}\small\item\em Fonction qui calcule la longueur moyenne du codage. \end{DoxyCompactList}\item 
+float $\ast$ \hyperlink{_compresseur_8c_a237cc29ef0f2ada00b41757158458ea3}{taille\+Etgain} (char $\ast$source, char $\ast$dest, int $\ast$Tab)
+\begin{DoxyCompactList}\small\item\em Fonction qui calcule la taille original, la taille compresser sans et avec l\textquotesingle{}arbre et le gain en pourcentage de la compression pour les deux cas en octetet et les stocke dans un tableau. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{_compresseur_8c_a23ec3f3fe014f3d69158654d6c0a8d12}{comptage} (char $\ast$file)
+\begin{DoxyCompactList}\small\item\em fonction qui compte le nombre d\textquotesingle{}occurence de chaque caractère \end{DoxyCompactList}\item 
+int \hyperlink{_compresseur_8c_a9f78f72f38ce5af2d4ff6589a693afac}{construction\+Arbre} (int $\ast$nb\+Occu)
+\begin{DoxyCompactList}\small\item\em Fonction qui construit l\textquotesingle{}abre à partir d\textquotesingle{}un tableau d\textquotesingle{}entier contenant le nombre d\textquotesingle{}occurence de chaque caractère et renvoie la racine. \end{DoxyCompactList}\item 
+void \hyperlink{_compresseur_8c_a3c116ac4711fd354898d142c19d57c4a}{parcoursarbre} (int racine, char $\ast$codebin)
+\begin{DoxyCompactList}\small\item\em Fonction recursive qui parcours l\textquotesingle{}abre en commençant par la racine \textbackslash{} Attribut un 0 si on vas à gauche et attribut un 1 si on vas à droite et sauvegarde le résultat dans une chaîne de caractère et une fois qu\textquotesingle{}on tombe sur une feuille on copie le tableau qui contient le code d\textquotesingle{}un caractère dans le tableau char$\ast$ code\mbox{[}256\mbox{]}. \end{DoxyCompactList}\item 
+void \hyperlink{_compresseur_8c_a4bf792c6869b3c3533f005470d9b1d9f}{compression} (char $\ast$source, char $\ast$destination)
+\begin{DoxyCompactList}\small\item\em Fonction qui appelle les trois fonction comptage,construction\+Arbre et parcours arbre, et qui modifie le flux binaire du fichier destination. \end{DoxyCompactList}\item 
+void \hyperlink{_compresseur_8c_af31e614a857023f13b2e48d8cc2f4065}{compression\+Huff} (char $\ast$file\+\_\+source, char $\ast$file\+\_\+dest)
+\begin{DoxyCompactList}\small\item\em Fonction qui fait la compression en quatre étapes et qui appelle toutes les précédente fonction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Fichier pour le compresseur contenant le code des toutes les fontions présentes dans le fichier d\textquotesingle{}en tête. 
+
+\begin{DoxyAuthor}{Auteur}
+Yanis Bouallouche ; Ophélia Benin
+\end{DoxyAuthor}
+Cette partie concerne le compresseur 
+
+\subsection{Documentation des fonctions}
+\mbox{\Hypertarget{_compresseur_8c_ad751926a9a5702957ad4b018b140decb}\label{_compresseur_8c_ad751926a9a5702957ad4b018b140decb}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!affiche@{affiche}}
+\index{affiche@{affiche}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{affiche()}{affiche()}}
+{\footnotesize\ttfamily void affiche (\begin{DoxyParamCaption}\item[{int $\ast$}]{occurence }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche le nombre d\textquotesingle{}occurence de chaque caractère et sa probabilité 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON affiche 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em int$\ast$} & Un tableau d\textquotesingle{}entier contenant le nombre d\textquotesingle{}occurence de chaque caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Ne retourne rien 
+\end{DoxyReturn}
+Cette fonction calcule d\textquotesingle{}abord le nombre total de caractère, et ensuite elle affiche ce dernier ainsi que le nombre d\textquotesingle{}occurence et la probabilté de chaque caractère \mbox{\Hypertarget{_compresseur_8c_ae10b899b8a3196bbc2f5fdb95856dd97}\label{_compresseur_8c_ae10b899b8a3196bbc2f5fdb95856dd97}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!affiche\+Arbre@{affiche\+Arbre}}
+\index{affiche\+Arbre@{affiche\+Arbre}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{affiche\+Arbre()}{afficheArbre()}}
+{\footnotesize\ttfamily void affiche\+Arbre (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fonction qui affiche les noeud de l\textquotesingle{}arbre 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: affiche\+Arbre 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em void} & ne prend aucun paramètre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ne retourne rien 
+\end{DoxyReturn}
+Cette fonction affiche l\textquotesingle{}arbre de huffman, pour chaque feuilles,le nombre d\textquotesingle{}occurences et l\textquotesingle{}indice du noeud pere est affiché
+
+Et pour chaque noeud le nombre d\textquotesingle{}occurence, l\textquotesingle{}indice du noeud pere de l\textquotesingle{}enfant gauche ainsi que l\textquotesingle{}enfant D est affiché \mbox{\Hypertarget{_compresseur_8c_a537923ba3505b3f11b3a87e70ec69b58}\label{_compresseur_8c_a537923ba3505b3f11b3a87e70ec69b58}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!affiche\+Code@{affiche\+Code}}
+\index{affiche\+Code@{affiche\+Code}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{affiche\+Code()}{afficheCode()}}
+{\footnotesize\ttfamily void affiche\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche le code binaire de chaque caractère. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: affiche\+Code 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em void} & ne prend aucun paramètre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ne retourne rien 
+\end{DoxyReturn}
+Cette fonction affiche le code binaire de chaque feuille \mbox{\Hypertarget{_compresseur_8c_aa26b3ce848df7d5769ffb0d79946481f}\label{_compresseur_8c_aa26b3ce848df7d5769ffb0d79946481f}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!affiche\+Lg@{affiche\+Lg}}
+\index{affiche\+Lg@{affiche\+Lg}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{affiche\+Lg()}{afficheLg()}}
+{\footnotesize\ttfamily void affiche\+Lg (\begin{DoxyParamCaption}\item[{float}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche la longeur moyenne du codage. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: affiche\+Lg 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em float} & la longueur moyenne  ne retourne rien \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_compresseur_8c_ac9207c28953adf5a3b69bdd29981bf21}\label{_compresseur_8c_ac9207c28953adf5a3b69bdd29981bf21}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!affiche\+Taille@{affiche\+Taille}}
+\index{affiche\+Taille@{affiche\+Taille}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{affiche\+Taille()}{afficheTaille()}}
+{\footnotesize\ttfamily void affiche\+Taille (\begin{DoxyParamCaption}\item[{float $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui affiche la taille original, la taille compresser sans et avec l\textquotesingle{}arbre et le gain de la compression pour les deux cas. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: affiche\+Taille 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em float$\ast$} & tableau de float contenant la taille original, la taille compresser sans et avec l\textquotesingle{}abre et le gain de la compression pour les deux cas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+ne retourne rien 
+\end{DoxyReturn}
+Cette fonction prend un tableau de float où on a stocké la taille du fichier original, celle du fichier compressé avec et sans l\textquotesingle{}arbre ainsi que le gain dans les deux cas, donc elle prend un tableau de taille 5 .
+
+Le tableau de float est le résultat de la fonction float$\ast$ taille\+Et\+Gain(char$\ast$,char$\ast$,int$\ast$) \mbox{\Hypertarget{_compresseur_8c_a4bf792c6869b3c3533f005470d9b1d9f}\label{_compresseur_8c_a4bf792c6869b3c3533f005470d9b1d9f}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!compression@{compression}}
+\index{compression@{compression}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{compression()}{compression()}}
+{\footnotesize\ttfamily void compression (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui appelle les trois fonction comptage,construction\+Arbre et parcours arbre, et qui modifie le flux binaire du fichier destination. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: compression 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em char$\ast$} & un pointeur char, qui doit être le fichier source \\
+\hline
+\mbox{\tt in}  & {\em char$\ast$} & un pointeur char, qui doit être le fichier destinataire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void ne retourne rien 
+\end{DoxyReturn}
+Positioner l\textquotesingle{}arbre en en-\/tête
+
+On parcourt le fichier source en utilisant fgetc qui va lire les caractères un à un et qui vas les stocker dans la variable int ascii
+
+On accede au code binaire correspondant au caractère lu. On s\textquotesingle{}arrête dés qu\textquotesingle{}on tombe sur \textquotesingle{}\textbackslash{}0\textquotesingle{}
+
+On modifie le flux binaire en utilisant l\textquotesingle{}opérateur binaire \textquotesingle{}ou\textquotesingle{}
+
+Si cpt est différent de 8 on décale à gauche
+
+Sinon cela veut dire qu\textquotesingle{}un octet est rempli , on utilise donc fputc pour mettre cet octet dans le flux write, on remet le cpt à zero \mbox{\Hypertarget{_compresseur_8c_af31e614a857023f13b2e48d8cc2f4065}\label{_compresseur_8c_af31e614a857023f13b2e48d8cc2f4065}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!compression\+Huff@{compression\+Huff}}
+\index{compression\+Huff@{compression\+Huff}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{compression\+Huff()}{compressionHuff()}}
+{\footnotesize\ttfamily void compression\+Huff (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui fait la compression en quatre étapes et qui appelle toutes les précédente fonction. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: compression\+Huff 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em char$\ast$} & un pointeur char, qui doit être le fichier source \\
+\hline
+\mbox{\tt in}  & {\em char$\ast$} & un pointeur char, qui doit être le fichier destinataire \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void ne retourne rien 
+\end{DoxyReturn}
+É\+T\+A\+PE 1\+: Le comptage
+
+É\+T\+A\+PE 2\+: La construction de l\textquotesingle{}arbre
+
+É\+T\+A\+PE 3\+: Le parcours de l\textquotesingle{}arbre
+
+Affichage de la longueur moyenne du codage
+
+É\+T\+A\+PE 4\+: La compression
+
+Affichage taille originale \& compressée \& gain de compression \mbox{\Hypertarget{_compresseur_8c_a23ec3f3fe014f3d69158654d6c0a8d12}\label{_compresseur_8c_a23ec3f3fe014f3d69158654d6c0a8d12}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!comptage@{comptage}}
+\index{comptage@{comptage}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{comptage()}{comptage()}}
+{\footnotesize\ttfamily int$\ast$ comptage (\begin{DoxyParamCaption}\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+fonction qui compte le nombre d\textquotesingle{}occurence de chaque caractère 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: Comptage 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em char$\ast$} & Prend un fichier(le fichier source) comme paramètre \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int$\ast$ ; Un tableau d\textquotesingle{}entier qui contient le nombre d\textquotesingle{}encurronce de chaque caractère 
+\end{DoxyReturn}
+Les indices du tableau qui vas contenir le nombre d\textquotesingle{}occurences de chaque caractère correspondent au code A\+S\+C\+II de chaque caractère
+
+Allocation dynamique pour ne pas désalouer les valeurs à la sortie de la fonction
+
+Initialisation des valeurs du tableau à zero \mbox{\Hypertarget{_compresseur_8c_a9f78f72f38ce5af2d4ff6589a693afac}\label{_compresseur_8c_a9f78f72f38ce5af2d4ff6589a693afac}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!construction\+Arbre@{construction\+Arbre}}
+\index{construction\+Arbre@{construction\+Arbre}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{construction\+Arbre()}{constructionArbre()}}
+{\footnotesize\ttfamily int construction\+Arbre (\begin{DoxyParamCaption}\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui construit l\textquotesingle{}abre à partir d\textquotesingle{}un tableau d\textquotesingle{}entier contenant le nombre d\textquotesingle{}occurence de chaque caractère et renvoie la racine. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: construction\+Arbre 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em int$\ast$} & Prend un tableau d\textquotesingle{}entier contenant le nombre d\textquotesingle{}occurence de chaque caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int ; la racine de l\textquotesingle{}arbre 
+\end{DoxyReturn}
+Initialisation à zéro pour les nombre d\textquotesingle{}occurence et à -\/1 pour pere,enfant\+\_\+D et enfant\+\_\+G pour touts les élements de l\textquotesingle{}arbre
+
+Mettre le nombre d\textquotesingle{}occurence des feuilles
+
+Dans le cas où le fichier à compresser contient qu\textquotesingle{}un seul type de caractère alors la fonction renvoie le code A\+S\+C\+II de ce caractère
+
+last représente le prochain noeud
+
+Recherche des deux plus petits nombre d\textquotesingle{}occurence dans l\textquotesingle{}abre
+
+On incrémente d\textquotesingle{}abord last puis on met dans ce noeud la somme des deux noeuds au plus petits nombre d\textquotesingle{}occurence et on modifie l\textquotesingle{}indice de l\textquotesingle{}enfant gauche et l\textquotesingle{}enfant droit du noeud à l\textquotesingle{}indice last ainsi que le père des deux neoud appareillés
+
+On répète tant qu\textquotesingle{}on va trouver 2 noeuds à joindre \mbox{\Hypertarget{_compresseur_8c_adabad13fda9ecfe8049b7f1c40426b27}\label{_compresseur_8c_adabad13fda9ecfe8049b7f1c40426b27}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!lgmoyenne@{lgmoyenne}}
+\index{lgmoyenne@{lgmoyenne}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{lgmoyenne()}{lgmoyenne()}}
+{\footnotesize\ttfamily float lgmoyenne (\begin{DoxyParamCaption}\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui calcule la longueur moyenne du codage. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: lgmoyenne 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em int$\ast$} & Un tableau d\textquotesingle{}entier contenant le nombre d\textquotesingle{}occurence de chaque caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float ; La longueur moyenne du codage 
+\end{DoxyReturn}
+Cette fonction calcule la longueur moyenne du codage en aditionnant la probabilité multiplié par le nombre de bits du code de chaque chaque feuille \mbox{\Hypertarget{_compresseur_8c_a3c116ac4711fd354898d142c19d57c4a}\label{_compresseur_8c_a3c116ac4711fd354898d142c19d57c4a}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!parcoursarbre@{parcoursarbre}}
+\index{parcoursarbre@{parcoursarbre}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{parcoursarbre()}{parcoursarbre()}}
+{\footnotesize\ttfamily void parcoursarbre (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction recursive qui parcours l\textquotesingle{}abre en commençant par la racine \textbackslash{} Attribut un 0 si on vas à gauche et attribut un 1 si on vas à droite et sauvegarde le résultat dans une chaîne de caractère et une fois qu\textquotesingle{}on tombe sur une feuille on copie le tableau qui contient le code d\textquotesingle{}un caractère dans le tableau char$\ast$ code\mbox{[}256\mbox{]}. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: parcoursarbre 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em int} & un entier qui représente la racine de l\textquotesingle{}arbre \\
+\hline
+\mbox{\tt in}  & {\em char$\ast$} & une chaine de caractère vide \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void ne retourne rien 
+\end{DoxyReturn}
+On créer le tableau en local on en aura plus besoin par la suite.
+
+Recopie ncode\+Bin dans code\+Bin
+
+On positionne les 0 à gauche et les 1 à droite On met un \textquotesingle{}0\textquotesingle{} dans ncodebin
+
+Et on rappelle la fonction avec l\textquotesingle{}indice de l\textquotesingle{}enfant gauche et ncodebin ainsi de suite
+
+On met un \textquotesingle{}1\textquotesingle{} dans ncodebin
+
+Et on rappelle la fonction avec l\textquotesingle{}indice de l\textquotesingle{}enfant droit et ncodebin ainsi de suite
+
+Des qu\textquotesingle{}on tombe sur un noeud qui n\textquotesingle{}as pas d\textquotesingle{}enfant alors on est arriver à une feuille et on copie le contenue de nbcodebin dans le tableau char$\ast$ code\mbox{[}256\mbox{]} à l\textquotesingle{}indice de la feuille \mbox{\Hypertarget{_compresseur_8c_a237cc29ef0f2ada00b41757158458ea3}\label{_compresseur_8c_a237cc29ef0f2ada00b41757158458ea3}} 
+\index{Compresseur.\+c@{Compresseur.\+c}!taille\+Etgain@{taille\+Etgain}}
+\index{taille\+Etgain@{taille\+Etgain}!Compresseur.\+c@{Compresseur.\+c}}
+\subsubsection{\texorpdfstring{taille\+Etgain()}{tailleEtgain()}}
+{\footnotesize\ttfamily float$\ast$ taille\+Etgain (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{int $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Fonction qui calcule la taille original, la taille compresser sans et avec l\textquotesingle{}arbre et le gain en pourcentage de la compression pour les deux cas en octetet et les stocke dans un tableau. 
+
+~\newline
+ F\+O\+N\+C\+T\+I\+ON\+: taille\+Etgain 
+\begin{DoxyParams}[1]{Paramètres}
+\mbox{\tt in}  & {\em char$\ast$} & un pointeur vers un char qui représente le fichier source \\
+\hline
+\mbox{\tt in}  & {\em char$\ast$} & un pointeur vers un char qui représente le fichier destinataire \\
+\hline
+\mbox{\tt in}  & {\em int$\ast$} & un tableau d\textquotesingle{}entier contenant le nombre d\textquotesingle{}occurence de chaque caractère \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float ; tableau de float contenant la taille original, la taille compresser sans et avec l\textquotesingle{}arbre et le gain de la compression pour les deux cas 
+\end{DoxyReturn}
+strcuture nécaissaire pour la fonction qui calcule la taille d\textquotesingle{}un fichier ~\newline
+ struct stat st;
+
+Calcule la taille du fichier source
+
+Calcule la taille du fichier compresser avec l\textquotesingle{}arbre
+
+Calcule la taille du fichier compresser sans l\textquotesingle{}arbre
+
+Calcule le gain avec arbre
+
+Calcule le gain sans arbre
+
+Stocke tout les résultat dans un tableau float 
